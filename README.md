@@ -40,7 +40,7 @@ Before running the script, make sure you have the following:
 
 4. Execute the script:
    
-   `sudo bash install-tools.sh`
+   `sudo bash install-tools.sh` or `sudo ./install-tools.sh`
         
 7. After installation, ensure that the default ports for the tools are allowed under the inbound rules of your EC2 instance:
 * Jenkins: Port 8080
