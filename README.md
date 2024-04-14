@@ -55,7 +55,7 @@ Whenever the EC2 instance is stopped, the Docker containers running Jenkins, Nex
 
 To automatically start the containers when you start your instance, utilize the provided `start-containers.sh script`. This script starts both containers seamlessly.
 
-To access the shell of a container, execute the command: `docker exec -it <container-name> bash`
+To access the shell of a container, execute the command: `docker exec -it "container-name" bash`
 
 Replace <container-name> with the actual name of the container, which you can retrieve by running: `docker ps`
 
