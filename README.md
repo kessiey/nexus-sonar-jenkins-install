@@ -17,7 +17,7 @@ Before running the script, make sure you have the following:
 * Storage: 30GB root volume
 * Operating System: Ubuntu
 
-![image](https://github.com/kessiey/nexus-sonar-jenkins-install/assets/122237149/08adec83-3f14-43ee-8b17-4f8833694594)
+![image](https://github.com/kessiey/nexus-sonar-jenkins-install/assets/122237149/2b467293-8c50-48c8-a969-1aea348862e5)
 
 # TOOLS TO BE INSTALLED
 * Jenkins
@@ -48,7 +48,7 @@ Before running the script, make sure you have the following:
 * SonarQube: Port 9000
 * SSH: Port 22
 
-![Screenshot 2024-04-14 105149](https://github.com/kessiey/nexus-sonar-jenkins-install/assets/122237149/c81540a6-f84a-442a-9c22-57cab5ffb230)
+![Screenshot 2024-04-14 105149](https://github.com/kessiey/nexus-sonar-jenkins-install/assets/122237149/596fa2d5-ad1a-42f5-9865-a08d25439e3f)
 
 # IMPORTANT NOTE
 Whenever the EC2 instance is stopped, the Docker containers running Jenkins, Nexus and SonarQube will also stop.
