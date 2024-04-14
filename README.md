@@ -41,8 +41,38 @@ Before running the script, make sure you have the following:
 4. Execute the script:
    
    `sudo bash install-tools.sh` or `sudo ./install-tools.sh`
-        
-7. After installation, ensure that the default ports for the tools are allowed under the inbound rules of your EC2 instance:
+
+5. To enable automatic execution of the start-containers.sh script when the server starts, moving it to a directory that is intended for user scripts, such as /usr/local/bin.
+
+   `sudo mv start-containers.sh /usr/local/bin`
+
+6. Make a declaration to the automatic start path by creating a file here:
+
+   `sudo vi /etc/systemd/system/start-containers.service`
+
+   Then copy and paste the following into the file:
+   ```
+    [Unit]
+    Description=Start Containers Service
+    After=network.target
+ 
+    [Service]
+    Type=simple
+    ExecStart=/bin/bash /path/to/your/start_containers.sh
+ 
+    [Install]
+    WantedBy=multi-user.target
+
+7. Use the following commands to enable and start the start-containers.service systemd unit.
+   NB: Stop all the docker containters before running these commands
+   ```
+   sudo systemctl daemon-reload
+ 
+   sudo systemctl enable start-containers.service
+ 
+   sudo systemctl start start-containers.service
+
+9. After installation, ensure that the default ports for the tools are allowed under the inbound rules of your EC2 instance:
 * Jenkins: Port 8080
 * Nexus: Port 8081
 * SonarQube: Port 9000
